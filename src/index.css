@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #3b82f6;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1e3a8a;
+  --color-primary-fixed: #bfdbfe;
+  --color-secondary: #10b981;
+  --color-secondary-fixed: #6ee7b7;
+  --color-secondary-container: #064e3b;
+  --color-background: #0f172a;
+  --color-on-background: #f8fafc;
+  --color-surface: #1e293b;
+  --color-on-surface: #f1f5f9;
+  --color-surface-bright: #1e293b;
+  --color-tertiary-fixed: #ffedd5;
+  --color-tertiary-container: #7c2d12;
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans min-h-screen overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .space-bg-pattern {
+    background-color: #0f172a;
+    background-image: radial-gradient(circle at 2px 2px, #3b82f633 1px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 15px rgba(131,251,165,0.8);
+  }
+
+  .star-bg {
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .font-lexend {
+    font-family: "Lexend", sans-serif;
+  }
+}
